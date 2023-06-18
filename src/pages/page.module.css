@@ -1,0 +1,33 @@
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+}
+
+.sub {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.show {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+}
+
+.options {
+    display: flex;
+    margin: 1rem;
+    flex-wrap: wrap;
+}
+
+.options button {
+    padding: 1rem;
+    margin: 2rem;
+}
