@@ -71,7 +71,7 @@ function Show({ user, questionData }) {
     }
 
     return <div className={styles.show}>
-        <h2> ❓❓ { question } ❓❓ </h2>
+        <h2 style={{'textAlign': 'center'}}> { question }  </h2>
         <div className={styles.options}>
             {
                 options.map((option, idx) => (
