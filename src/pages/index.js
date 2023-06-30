@@ -22,12 +22,20 @@ export default function Home() {
             setDisplay(question);
         }
 
+        function onCoffee() {
+            setDisplay(null);
+            let sound = new Audio("https://www.fesliyanstudios.com/play-mp3/3987")
+            sound.play()
+        }
+
         socket.on('NODE HIDE', onHide);
         socket.on('NODE SHOW', onShow);
+        socket.on('NODE COFFEE', onCoffee);
 
         return () => {
             socket.off('NODE HIDE', onHide);
             socket.off('NODE SHOW', onShow);
+            socket.off('NODE COFFEE', onCoffee);
         }
 
     }, []);
@@ -71,7 +79,7 @@ function Show({ user, questionData }) {
     }
 
     return <div className={styles.show}>
-        <h2> ❓❓ { question } ❓❓ </h2>
+        <h2 style={{'textAlign': 'center'}}> { question }  </h2>
         <div className={styles.options}>
             {
                 options.map((option, idx) => (
